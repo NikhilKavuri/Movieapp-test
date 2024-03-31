@@ -1,9 +1,12 @@
 import "./App.css";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img
           class="poster"
           src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg"
@@ -21,7 +24,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+
+      <div style={{ paddingTop: "60px", paddingBottom: "60px" }}>
+        <Home />
+      </div>
     </div>
   );
 }
