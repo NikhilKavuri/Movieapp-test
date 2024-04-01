@@ -2,33 +2,28 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-
+import Favourites from "./Pages/Favourites";
+import WishList from "./Pages/WishList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img
-          class="poster"
-          src="https://image.tmdb.org/t/p/w500/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg"
-          alt="Kung Fu Panda 4 Poster"
-        />
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-
-      <div style={{ paddingTop: "60px", paddingBottom: "60px" }}>
-        <Home />
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div style={{ paddingTop: "60px", paddingBottom: "60px" }}>
+                <Home />
+              </div>
+            }
+          ></Route>
+          <Route path="/favourites" element={<Favourites />} />
+          <Route path="/wishlist" element={<WishList />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
