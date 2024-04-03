@@ -32,7 +32,6 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const {
     page,
-    setPage,
     setPopularMovies,
     setShowWishList,
     setShowFavourites,

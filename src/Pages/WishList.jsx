@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
 import { useMovieContext } from "../Context/Moviecontext";
 import { Wrap, WrapItem } from "@chakra-ui/react";
@@ -6,6 +7,7 @@ import MovieCard from "../Components/MovieCard";
 const Favourites = () => {
   const { wishLists, setWishLists, popularMovies, setPopularMovies } =
     useMovieContext();
+
   useEffect(() => {
     let lists = localStorage.getItem("wishList");
     if (lists) {

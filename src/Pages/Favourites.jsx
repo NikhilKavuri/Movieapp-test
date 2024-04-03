@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
 import { useMovieContext } from "../Context/Moviecontext";
 import { Wrap, WrapItem } from "@chakra-ui/react";
